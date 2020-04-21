@@ -131,7 +131,7 @@ class Perception:
         self.see = [{}, {}]
         self.game_state = GameState()
         self.gps = {}
-        self.imu = [0, 0] # [AngleX, AngleY]
+        self.imu = [0, 0]  # [AngleX, AngleY]
 
     def update(self, sexp):
         for s in sexp:
@@ -150,7 +150,8 @@ class Perception:
                     jointv[i[0]] = i[1]
                 name = JOINT_SENSOR_NAMES[jointv['n']]
                 if 'ax' in jointv:
-                    self.joint[name] = float(jointv['ax']) * DEG_TO_RAD * (-1 if name in INVERSED_JOINTS else 1)
+                    self.joint[name] = float(jointv['ax']) * DEG_TO_RAD * \
+                        (-1 if name in INVERSED_JOINTS else 1)
                 if 'tp' in jointv:
                     self.joint_temperature[name] = float(jointv['tp'])
             elif name == VISION_PERCEPTOR or name == TOP_CAMERA:
@@ -198,7 +199,8 @@ class Action(object):
         self.speed = {}
 
     def to_commands(self):
-        speed = ['(%s %.2f)' % (JOINT_CMD_NAMES[k], v * (-1 if k in INVERSED_JOINTS else 1)) for k, v in self.speed.iteritems()]
+        speed = ['(%s %.2f)' % (JOINT_CMD_NAMES[k], v * (-1 if k in INVERSED_JOINTS else 1))
+                 for k, v in self.speed.iteritems()]
         stiffness = ['(%ss %.2f)' % (JOINT_CMD_NAMES[k], v) for k, v in self.stiffness.iteritems()]
         return ''.join(speed + stiffness)
 

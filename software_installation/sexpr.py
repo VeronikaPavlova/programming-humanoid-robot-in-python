@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 ##
-##  sexpr.py - by Yusuke Shinyama
+# sexpr.py - by Yusuke Shinyama
 ##
-##  * public domain *
+# * public domain *
 ##
 
 
-##  AbstractFilter
+# AbstractFilter
 ##
 class AbstractFilter:
     def __init__(self, next_filter):
@@ -29,7 +29,7 @@ class AbstractFilter:
         return
 
 
-##  AbstractConsumer
+# AbstractConsumer
 ##
 class AbstractConsumer:
     def feed(self, s):
@@ -39,7 +39,7 @@ class AbstractConsumer:
         return
 
 
-##  SExprReader
+# SExprReader
 ##
 class SExprReader(AbstractFilter):
     """Usage:
@@ -82,11 +82,11 @@ class SExprReader(AbstractFilter):
 
     # called if redundant parantheses are found.
     def illegal_close_paren(self, i):
-        print "Ignore a close parenthesis: %d" % i
+        print("Ignore a close parenthesis: %d" % i)
 
     # called if it reaches the end-of-file while the stack is not empty.
     def premature_eof(self, i, x):
-        print "Premature end of file: %d parens left, partial=%s" % (i, x)
+        print("Premature end of file: %d parens left, partial=%s" % (i, x))
 
     # reset the internal states.
     def reset(self):
@@ -179,7 +179,7 @@ class SExprReader(AbstractFilter):
         self.terminate()
 
 
-##  StrictSExprReader
+# StrictSExprReader
 ##
 class SExprIllegalClosingParenError(ValueError):
     """It throws an exception with an ill-structured input."""
@@ -198,7 +198,7 @@ class StrictSExprReader(SExprReader):
         raise SExprPrematureEOFError(i, x)
 
 
-##  str2sexpr
+# str2sexpr
 ##
 class _SExprStrConverter(AbstractConsumer):
     results = []
@@ -225,7 +225,7 @@ def str2sexpr_strict(s):
     return _SExprStrConverter.results
 
 
-##  sexpr2str
+# sexpr2str
 ##
 def sexpr2str(e):
     """convert a sexpr into Lisp-like representation."""
