@@ -12,6 +12,7 @@
 # add PYTHONPATH
 import os
 import sys
+
 sys.path.append(os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'software_installation'))
 
 import numpy as np
@@ -20,15 +21,16 @@ from spark_agent import SparkAgent, JOINT_CMD_NAMES
 
 
 class PIDController(object):
-    '''a discretized PID controller, it controls an array of servos,
+    """a discretized PID controller, it controls an array of servos,
        e.g. input is an array and output is also an array
-    '''
+    """
+
     def __init__(self, dt, size):
-        '''
+        """
         @param dt: step time
         @param size: number of control values
         @param delay: delay in number of steps
-        '''
+        """
         self.dt = dt
         self.u = np.zeros(size)
         self.e1 = np.zeros(size)
@@ -36,8 +38,9 @@ class PIDController(object):
         # ADJUST PARAMETERS BELOW
         delay = 0
         self.Kp = 20
-        self.Ki = 0
-        self.Kd = 0.10
+        self.Ki = 0.3
+        self.Kd = 0.20
+
         self.y = deque(np.zeros(size), maxlen=delay + 1)
 
     def set_delay(self, delay):
@@ -47,25 +50,25 @@ class PIDController(object):
         self.y = deque(self.y, delay + 1)
 
     def control(self, target, sensor):
-        '''apply PID control
+        """apply PID control
         @param target: reference values
         @param sensor: current values from sensor
         @return control signal
-        '''
+        """
 
-        e = (target - sensor)
+        e = target - sensor
 
-        p = self.Kp + self.Ki * self.dt + self.Kd/self.dt
-        i = self.Kp + (2 * self.Kd)/self.dt
-        d = self.Kd/self.dt
-        self.u = self.u + p * e - i * self.e1 + d * self.e2
+        predicted = sensor * self.dt
+        self.y.append(predicted)
+
+        p = self.Kp + self.Ki * self.dt + self.Kd / self.dt
+        i = self.Kp + (2 * self.Kd) / self.dt
+        d = self.Kd / self.dt
+
+        self.u = self.y.popleft() + p * e - i * self.e1 + d * self.e2
 
         self.e2 = self.e1
         self.e1 = e
-
-        #buffer model predictions
-        predicted = self.u + ((self.u - sensor) + (self.y.popleft() - sensor)) / (2 * self.dt) * self.dt
-        self.y.append(predicted)
 
         return self.u
 
@@ -88,15 +91,15 @@ class PIDAgent(SparkAgent):
         perception.joint:   current joints' positions (dict: joint_id -> position (current))
         self.target_joints: target positions (dict: joint_id -> position (target)) '''
         joint_angles = np.asarray(
-            [perception.joint[joint_id]  for joint_id in JOINT_CMD_NAMES])
+            [perception.joint[joint_id] for joint_id in JOINT_CMD_NAMES])
         target_angles = np.asarray([self.target_joints.get(joint_id,
-            perception.joint[joint_id]) for joint_id in JOINT_CMD_NAMES])
+                                                           perception.joint[joint_id]) for joint_id in JOINT_CMD_NAMES])
         u = self.joint_controller.control(target_angles, joint_angles)
-        action.speed = dict(zip(JOINT_CMD_NAMES.iterkeys(), u))  # dict: joint_id -> speed
+        action.speed = dict(zip(JOINT_CMD_NAMES.keys(), u))  # dict: joint_id -> speed
         return action
 
 
 if __name__ == '__main__':
     agent = PIDAgent()
-    agent.target_joints['HeadYaw'] = 1.0
+    agent.target_joints['HeadYaw'] = 0
     agent.run()

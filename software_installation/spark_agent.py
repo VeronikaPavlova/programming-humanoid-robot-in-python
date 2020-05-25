@@ -1,5 +1,5 @@
-'''Base agent for SimSpark, it implements the sense-think-act loop
-'''
+"""Base agent for SimSpark, it implements the sense-think-act loop
+"""
 from builtins import bytes
 import socket
 import struct
@@ -172,7 +172,7 @@ class Perception:
             angX = atan2(data[9], data[10])
             angY = asin(-data[8])
             # convert angle range: angY in [-pi, pi], angX in [-pi/2, pi/2]
-            if (abs(angX) > pi / 2):
+            if abs(angX) > pi / 2:
                 angX = pi + angX
                 angX = atan2(sin(angX), cos(angX))  # normalize
                 angY = pi - angY
@@ -241,7 +241,7 @@ class SparkAgent(object):
 
     def sense(self):
         length = b''
-        while(len(length) < 4):
+        while len(length) < 4:
             length += self.socket.recv(4 - len(length))
         length = struct.unpack("!I", length)[0]
         msg = b''
