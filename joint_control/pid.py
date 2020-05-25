@@ -35,18 +35,19 @@ class PIDController(object):
         self.u = np.zeros(size)
         self.e1 = np.zeros(size)
         self.e2 = np.zeros(size)
+
         # ADJUST PARAMETERS BELOW
         delay = 0
-        self.Kp = 20
-        self.Ki = 0.3
-        self.Kd = 0.20
+        self.Kp = 19
+        self.Ki = 0.2
+        self.Kd = 0.1
 
         self.y = deque(np.zeros(size), maxlen=delay + 1)
 
     def set_delay(self, delay):
-        '''
+        """
         @param delay: delay in number of steps
-        '''
+        """
         self.y = deque(self.y, delay + 1)
 
     def control(self, target, sensor):
@@ -58,7 +59,8 @@ class PIDController(object):
 
         e = target - sensor
 
-        predicted = sensor * self.dt
+        speed = np.fromiter(dict(zip(JOINT_CMD_NAMES.keys(), self.u)).values(), dtype=float)
+        predicted = self.u + speed * self.dt    # angle(t) = angle(t-1) + speed * dt
         self.y.append(predicted)
 
         p = self.Kp + self.Ki * self.dt + self.Kd / self.dt
@@ -96,10 +98,11 @@ class PIDAgent(SparkAgent):
                                                            perception.joint[joint_id]) for joint_id in JOINT_CMD_NAMES])
         u = self.joint_controller.control(target_angles, joint_angles)
         action.speed = dict(zip(JOINT_CMD_NAMES.keys(), u))  # dict: joint_id -> speed
+
         return action
 
 
 if __name__ == '__main__':
     agent = PIDAgent()
-    agent.target_joints['HeadYaw'] = 0
+    agent.target_joints['HeadYaw'] = 1.0
     agent.run()

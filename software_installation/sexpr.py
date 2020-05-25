@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 ##
-# sexpr.py - by Yusuke Shinyama
+##  sexpr.py - by Yusuke Shinyama
 ##
-# * public domain *
+##  * public domain *
 ##
 import future
 
-# AbstractFilter
+##  AbstractFilter
 ##
 class AbstractFilter:
     def __init__(self, next_filter):
@@ -29,7 +29,7 @@ class AbstractFilter:
         return
 
 
-# AbstractConsumer
+##  AbstractConsumer
 ##
 class AbstractConsumer:
     def feed(self, s):
@@ -39,7 +39,7 @@ class AbstractConsumer:
         return
 
 
-# SExprReader
+##  SExprReader
 ##
 class SExprReader(AbstractFilter):
     """Usage:
@@ -179,7 +179,7 @@ class SExprReader(AbstractFilter):
         self.terminate()
 
 
-# StrictSExprReader
+##  StrictSExprReader
 ##
 class SExprIllegalClosingParenError(ValueError):
     """It throws an exception with an ill-structured input."""
@@ -198,7 +198,7 @@ class StrictSExprReader(SExprReader):
         raise SExprPrematureEOFError(i, x)
 
 
-# str2sexpr
+##  str2sexpr
 ##
 class _SExprStrConverter(AbstractConsumer):
     results = []
@@ -225,7 +225,7 @@ def str2sexpr_strict(s):
     return _SExprStrConverter.results
 
 
-# sexpr2str
+##  sexpr2str
 ##
 def sexpr2str(e):
     """convert a sexpr into Lisp-like representation."""

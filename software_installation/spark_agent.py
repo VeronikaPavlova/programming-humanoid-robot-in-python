@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-"""Base agent for SimSpark, it implements the sense-think-act loop
-"""
-=======
-<<<<<<< HEAD
-=======
 '''Base agent for SimSpark, it implements the sense-think-act loop
 '''
->>>>>>> 0cb6e5acf01c5d1294039c8b6f5a51715509cd9d
 from builtins import bytes
 import socket
 import struct
@@ -179,7 +172,7 @@ class Perception:
             angX = atan2(data[9], data[10])
             angY = asin(-data[8])
             # convert angle range: angY in [-pi, pi], angX in [-pi/2, pi/2]
-            if abs(angX) > pi / 2:
+            if (abs(angX) > pi / 2):
                 angX = pi + angX
                 angX = atan2(sin(angX), cos(angX))  # normalize
                 angY = pi - angY
@@ -221,7 +214,6 @@ class SparkAgent(object):
         self.connect(simspark_ip, simspark_port)
         self.perception = Perception()
 
->>>>>>> 3fb8e10fd9e72dd86741f59d1a401fbd0391eba0
         self.send_command('(scene rsg/agent/naov4/nao.rsg)')
         self.sense()  # only need to get msg from simspark
         init_cmd = ('(init (unum ' + str(player_id) + ')(teamname ' + teamname + '))')
@@ -249,7 +241,7 @@ class SparkAgent(object):
 
     def sense(self):
         length = b''
-        while len(length) < 4:
+        while(len(length) < 4):
             length += self.socket.recv(4 - len(length))
         length = struct.unpack("!I", length)[0]
         msg = b''
