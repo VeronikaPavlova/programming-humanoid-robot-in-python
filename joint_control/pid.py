@@ -64,8 +64,8 @@ class PIDController(object):
         self.e1 = e
 
         #buffer model predictions
-        #predicted = self.u + ((self.u - sensor) + (self.y.popleft() - sensor)) / (2 * self.dt) * self.dt
-        #self.y.append(predicted)
+        predicted = self.u + ((self.u - sensor) + (self.y.popleft() - sensor)) / (2 * self.dt) * self.dt
+        self.y.append(predicted)
 
         return self.u
 
