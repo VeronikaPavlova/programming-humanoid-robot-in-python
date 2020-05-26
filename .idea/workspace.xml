@@ -22,7 +22,8 @@
     <list default="true" id="2290aa7b-34d1-4077-9353-9a150ea080c4" name="Default Changelist" comment="Finished Angle interpolation&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py">
       <change beforePath="$PROJECT_DIR$/.idea/programming-humanoid-robot-in-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/programming-humanoid-robot-in-python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_control/angle_interpolation.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/angle_interpolation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_control/learn_posture.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/learn_posture.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_control/scikit-learn-intro.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/scikit-learn-intro.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +80,9 @@
       <module name="programming-humanoid-robot-in-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/joint_control" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -139,7 +143,11 @@
       <workItem from="1590441110715" duration="314000" />
       <workItem from="1590441606828" duration="7736000" />
       <workItem from="1590449571353" duration="9252000" />
-      <workItem from="1590493055339" duration="14172000" />
+      <workItem from="1590493055339" duration="14207000" />
+      <workItem from="1590508141491" duration="1128000" />
+      <workItem from="1590510138243" duration="549000" />
+      <workItem from="1590510778852" duration="3855000" />
+      <workItem from="1590522457547" duration="218000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py">
       <created>1590440430494</created>
@@ -162,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590508057281</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished Angle interpolation&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py">
+      <created>1590508098312</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590508098312</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,46 +207,46 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="545" height="506" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1590428207143" />
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1590507393603">
+    <state width="1807" height="239" key="GridCell.Tab.0.bottom" timestamp="1590522514819">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393603" />
-    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1590507393602">
+    <state width="1807" height="239" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514819" />
+    <state width="1807" height="239" key="GridCell.Tab.0.center" timestamp="1590522514818">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393602" />
-    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1590507393602">
+    <state width="1807" height="239" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514818" />
+    <state width="1807" height="239" key="GridCell.Tab.0.left" timestamp="1590522514817">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393602" />
-    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1590507393602">
+    <state width="1807" height="239" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514817" />
+    <state width="1807" height="239" key="GridCell.Tab.0.right" timestamp="1590522514818">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393602" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1590507393604">
+    <state width="1807" height="239" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514818" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1590508123739">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393604" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1590507393603">
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1590508123739">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393603" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1590507393603">
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1590508123739">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393603" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1590507393603">
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1590508123739">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590507393603" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1590440986983">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1590440986983" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590448216210">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590508160905">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590448216210" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590508160905" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1590496596792">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

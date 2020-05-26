@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/joint_control" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/software_installation" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/joint_control/keyframes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/joint_control/robot_pose_data" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
