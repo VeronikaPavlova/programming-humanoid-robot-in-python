@@ -19,7 +19,7 @@
 
 from pid import PIDAgent
 import time
-from keyframes import leftBackToStand, hello, leftBellyToStand, rightBackToStand
+from keyframes import leftBackToStand, hello, leftBellyToStand, rightBackToStand, rightBellyToStand, wipe_forehead
 
 
 class AngleInterpolationAgent(PIDAgent):
@@ -32,7 +32,6 @@ class AngleInterpolationAgent(PIDAgent):
         self.keyframes = ([], [], [])
         self.startTime = -1
         self.done = False
-        self.restart = False
 
     def think(self, perception):
         target_joints = self.angle_interpolation(self.keyframes, perception)
@@ -58,8 +57,6 @@ class AngleInterpolationAgent(PIDAgent):
                 self.done = True
             else:
                 print("Nao is not standing. Try again!")
-                self.startTime = -1
-                self.restart = True
             return {}
 
         angle = 0
@@ -126,5 +123,10 @@ class AngleInterpolationAgent(PIDAgent):
 
 if __name__ == '__main__':
     agent = AngleInterpolationAgent()
-    agent.keyframes = rightBackToStand()  # CHANGE DIFFERENT KEYFRAMES
+    agent.keyframes = leftBackToStand()  # CHANGE DIFFERENT KEYFRAMES
+
+    # By the Belly keyframes NAO not falls on the Belly ...
+    if agent.keyframes == leftBellyToStand() or agent.keyframes == rightBellyToStand():
+        agent.keyframes[2][0] = agent.keyframes[2][1]
+
     agent.run()

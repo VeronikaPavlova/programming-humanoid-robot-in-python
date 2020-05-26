@@ -19,11 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2290aa7b-34d1-4077-9353-9a150ea080c4" name="Default Changelist" comment="Finished Angle interpolation&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py">
-      <change beforePath="$PROJECT_DIR$/.idea/programming-humanoid-robot-in-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/programming-humanoid-robot-in-python.iml" afterDir="false" />
+    <list default="true" id="2290aa7b-34d1-4077-9353-9a150ea080c4" name="Default Changelist" comment="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_control/learn_posture.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/learn_posture.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_control/scikit-learn-intro.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/scikit-learn-intro.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_control/add_training_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/add_training_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_control/angle_interpolation.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/angle_interpolation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_control/recognize_posture.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/recognize_posture.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_control/standing_up.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/standing_up.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.angle_interpolation">
+  <component name="RunManager" selected="Python.standing_up">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="programming-humanoid-robot-in-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,9 +81,6 @@
       <module name="programming-humanoid-robot-in-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/joint_control" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -120,9 +118,52 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="recognize_posture" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="programming-humanoid-robot-in-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/joint_control" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/joint_control/recognize_posture.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="standing_up" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="programming-humanoid-robot-in-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/joint_control" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/joint_control/standing_up.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.standing_up" />
         <item itemvalue="Python.angle_interpolation" />
+        <item itemvalue="Python.recognize_posture" />
         <item itemvalue="Python.pid" />
       </list>
     </recent_temporary>
@@ -147,7 +188,8 @@
       <workItem from="1590508141491" duration="1128000" />
       <workItem from="1590510138243" duration="549000" />
       <workItem from="1590510778852" duration="3855000" />
-      <workItem from="1590522457547" duration="218000" />
+      <workItem from="1590522457547" duration="4374000" />
+      <workItem from="1590526891854" duration="2279000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py">
       <created>1590440430494</created>
@@ -177,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590508098312</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python">
+      <created>1590522710823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590522710823</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,53 +249,58 @@
     <MESSAGE value="Add prediction to PID&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py" />
     <MESSAGE value="Finished Angle interpolation" />
     <MESSAGE value="Finished Angle interpolation&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Angle interpolation&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py" />
+    <MESSAGE value="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="671" y="354" width="634" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590523716513">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="671" y="354" width="634" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1590523716513" />
     <state width="545" height="506" key="DebuggerActiveHint" timestamp="1590428207143">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="545" height="506" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1590428207143" />
-    <state width="1807" height="239" key="GridCell.Tab.0.bottom" timestamp="1590522514819">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1590529164057">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="239" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514819" />
-    <state width="1807" height="239" key="GridCell.Tab.0.center" timestamp="1590522514818">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
+    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1590529164057">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="239" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514818" />
-    <state width="1807" height="239" key="GridCell.Tab.0.left" timestamp="1590522514817">
+    <state width="1807" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
+    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1590529164057">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="239" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514817" />
-    <state width="1807" height="239" key="GridCell.Tab.0.right" timestamp="1590522514818">
+    <state width="1807" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
+    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1590529164057">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="239" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590522514818" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1590508123739">
+    <state width="1807" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1590529164058">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1590508123739">
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164058" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1590529164057">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1590508123739">
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1590529164057">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1590508123739">
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1590529164058">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590508123739" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164058" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1590440986983">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1590440986983" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590508160905">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590522723999">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590508160905" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590522723999" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1590496596792">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -272,7 +326,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$recognize_posture.coverage" NAME="recognize_posture Coverage Results" MODIFIED="1590524494937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
     <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$pid.coverage" NAME="pid Coverage Results" MODIFIED="1590446919447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
-    <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$angle_interpolation.coverage" NAME="angle_interpolation Coverage Results" MODIFIED="1590507372057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
+    <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$standing_up.coverage" NAME="standing_up Coverage Results" MODIFIED="1590529056048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
+    <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$angle_interpolation.coverage" NAME="angle_interpolation Coverage Results" MODIFIED="1590528104651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
   </component>
 </project>

@@ -5,8 +5,8 @@
 
 '''
 
-
 from recognize_posture import PostureRecognitionAgent
+from keyframes import leftBackToStand, hello, leftBellyToStand, rightBackToStand, rightBellyToStand
 
 
 class StandingUpAgent(PostureRecognitionAgent):
@@ -16,12 +16,29 @@ class StandingUpAgent(PostureRecognitionAgent):
 
     def standing_up(self):
         posture = self.posture
-        # YOUR CODE HERE
 
+        if posture == 'Back':
+            self.keyframes = leftBackToStand()
+        elif posture == 'Belly':
+            self.keyframes = leftBellyToStand()
+
+        # if belly_or_back == "bel" and left_or_right == "left":
+        #     self.keyframes = leftBellyToStand()
+        #     print("leftBellyToStand")
+        # elif belly_or_back == "bel" and left_or_right == "right":
+        #     self.keyframes = rightBellyToStand()
+        #     print("rightBellyToStand")
+        # elif belly_or_back == "bac" and left_or_right == "left":
+        #     self.keyframes = leftBackToStand()
+        #     print("leftBackToStand")
+        # elif belly_or_back == "bac" and left_or_right == "right":
+        #     self.keyframes = rightBackToStand()
+        #     print("rightBackToStand")
 
 class TestStandingUpAgent(StandingUpAgent):
-    '''this agent turns off all motor to falls down in fixed cycles
-    '''
+    """this agent turns off all motor to falls down in fixed cycles
+    """
+
     def __init__(self, simspark_ip='localhost',
                  simspark_port=3100,
                  teamname='DAInamite',
@@ -46,5 +63,6 @@ class TestStandingUpAgent(StandingUpAgent):
 
 
 if __name__ == '__main__':
-    agent = TestStandingUpAgent()
+    agent = StandingUpAgent()
+    agent.keyframes = leftBackToStand()
     agent.run()
