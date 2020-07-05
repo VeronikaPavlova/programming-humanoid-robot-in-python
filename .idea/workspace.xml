@@ -19,12 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2290aa7b-34d1-4077-9353-9a150ea080c4" name="Default Changelist" comment="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python">
+    <list default="true" id="2290aa7b-34d1-4077-9353-9a150ea080c4" name="Default Changelist" comment="add robot_pose.pkl&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_control/add_training_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/add_training_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_control/angle_interpolation.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/angle_interpolation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_control/recognize_posture.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/recognize_posture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/joint_control/standing_up.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/standing_up.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinematics/forward_kinematics_2d.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/forward_kinematics_2d.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_autograd.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_autograd.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_jacobian.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_jacobian.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_jax.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_jax.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_optimization.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_optimization.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_sympy.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_sympy.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +198,9 @@
       <workItem from="1590510778852" duration="3855000" />
       <workItem from="1590522457547" duration="4374000" />
       <workItem from="1590526891854" duration="2279000" />
+      <workItem from="1590529485335" duration="123000" />
+      <workItem from="1590570650018" duration="10000" />
+      <workItem from="1593976218079" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py">
       <created>1590440430494</created>
@@ -232,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590522710823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add robot_pose&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python">
+      <created>1590529500904</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590529500904</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +268,8 @@
     <MESSAGE value="Finished Angle interpolation" />
     <MESSAGE value="Finished Angle interpolation&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py" />
     <MESSAGE value="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
+    <MESSAGE value="add robot_pose&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
+    <option name="LAST_COMMIT_MESSAGE" value="add robot_pose&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
   </component>
   <component name="WindowStateProjectService">
     <state x="671" y="354" width="634" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590523716513">
@@ -303,10 +316,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1590440986983" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590522723999">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590529514566">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590522723999" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590529514566" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1590496596792">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
