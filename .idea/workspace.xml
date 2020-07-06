@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2290aa7b-34d1-4077-9353-9a150ea080c4" name="Default Changelist" comment="Nw pull for kinematics task">
-      <change beforePath="$PROJECT_DIR$/.idea/programming-humanoid-robot-in-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/programming-humanoid-robot-in-python.iml" afterDir="false" />
+    <list default="true" id="2290aa7b-34d1-4077-9353-9a150ea080c4" name="Default Changelist" comment="Finished FK">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joint_control/angle_interpolation.py" beforeDir="false" afterPath="$PROJECT_DIR$/joint_control/angle_interpolation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kinematics/forward_kinematics.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/forward_kinematics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinematics/forward_kinematics_2d.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/forward_kinematics_2d.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kinematics/inverse_kinematics.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/inverse_kinematics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_autograd.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kinematics/inverse_kinematics_2d_autograd.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="e648c6e0-401a-4e6f-afcd-8b5304bab065" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="293" />
+    <option name="y" value="53" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
   <component name="ProjectId" id="1cPCoSw7kqVxBsbGA8hzISFvcWN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +59,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.forward_kinematics">
+  <component name="RunManager" selected="Python.inverse_kinematics">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="programming-humanoid-robot-in-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,6 +104,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="forward_kinematics (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="programming-humanoid-robot-in-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/programming-humanoid-robot-in-python-masterYYde/programming-humanoid-robot-in-python-master/kinematics" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/programming-humanoid-robot-in-python-masterYYde/programming-humanoid-robot-in-python-master/kinematics/forward_kinematics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="forward_kinematics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="programming-humanoid-robot-in-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,9 +146,6 @@
       <module name="programming-humanoid-robot-in-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/kinematics" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -185,9 +205,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.inverse_kinematics" />
+      <item itemvalue="Python.angle_interpolation" />
+      <item itemvalue="Python.forward_kinematics" />
+      <item itemvalue="Python.recognize_posture" />
+      <item itemvalue="Python.standing_up" />
+      <item itemvalue="Python.forward_kinematics (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.forward_kinematics" />
+        <item itemvalue="Python.forward_kinematics (1)" />
         <item itemvalue="Python.standing_up" />
         <item itemvalue="Python.angle_interpolation" />
         <item itemvalue="Python.recognize_posture" />
@@ -220,7 +249,7 @@
       <workItem from="1590570650018" duration="10000" />
       <workItem from="1593976218079" duration="338000" />
       <workItem from="1593976566862" duration="3829000" />
-      <workItem from="1594055588913" duration="1108000" />
+      <workItem from="1594055588913" duration="5970000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python&#10;&#10;# Conflicts:&#10;#&#9;joint_control/pid_test.ipynb&#10;#&#9;software_installation/spark_agent.py">
       <created>1590440430494</created>
@@ -271,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593976736269</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finished FK">
+      <created>1594056709701</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594056709701</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +333,8 @@
     <MESSAGE value="Finished Angle learn_posture&#10;&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
     <MESSAGE value="add robot_pose&#10;Merge branch 'master' of https://github.com/VeronikaPavlova/programming-humanoid-robot-in-python" />
     <MESSAGE value="Nw pull for kinematics task" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nw pull for kinematics task" />
+    <MESSAGE value="Finished FK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished FK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="671" y="354" width="634" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590523716513">
@@ -308,46 +345,46 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="545" height="506" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1590428207143" />
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1590529164057">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1594060548347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
-    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1590529164057">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548347" />
+    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1594060548346">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
-    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1590529164057">
+    <state width="1807" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548346" />
+    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1594060548346">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
-    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1590529164057">
+    <state width="1807" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548346" />
+    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1594060548347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1590529164058">
+    <state width="1807" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548347" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1594060548347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164058" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1590529164057">
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548347" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1594060548347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1590529164057">
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548347" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1594060548347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164057" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1590529164058">
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548347" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1594060548347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590529164058" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1594060548347" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1590440986983">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1590440986983" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1593976745445">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594056715750">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1593976745445" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1594056715750" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1590496596792">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -363,6 +400,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/joint_control/angle_interpolation.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -377,5 +421,7 @@
     <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$pid.coverage" NAME="pid Coverage Results" MODIFIED="1590446919447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
     <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$standing_up.coverage" NAME="standing_up Coverage Results" MODIFIED="1590529056048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
     <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$angle_interpolation.coverage" NAME="angle_interpolation Coverage Results" MODIFIED="1590528104651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/joint_control" />
+    <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$forward_kinematics.coverage" NAME="forward_kinematics Coverage Results" MODIFIED="1594058745467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kinematics" />
+    <SUITE FILE_PATH="coverage/programming_humanoid_robot_in_python$inverse_kinematics.coverage" NAME="inverse_kinematics Coverage Results" MODIFIED="1594060425319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kinematics" />
   </component>
 </project>

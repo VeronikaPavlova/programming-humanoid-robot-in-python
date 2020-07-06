@@ -25,6 +25,7 @@ sys.path.append(os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', '
 from numpy.matlib import matrix, identity
 
 from angle_interpolation import AngleInterpolationAgent
+from keyframes import hello
 
 
 class ForwardKinematicsAgent(AngleInterpolationAgent):
@@ -93,17 +94,17 @@ class ForwardKinematicsAgent(AngleInterpolationAgent):
 
         :param joints: {joint_name: joint_angle}
         '''
-        for chain_joints in self.chains.values():
-            T = identity(4)
-            for joint in chain_joints:
-                angle = joints[joint]
-                Tl = self.local_trans(joint, angle)
-                # YOUR CODE HERE
-                T = np.dot(T, Tl)
+        T = identity(4)
 
-                self.transforms[joint] = T
+        for joint in joints.keys():
+            angle = joints[joint]
+            Tl = self.local_trans(joint, angle)
+            T = np.dot(T, Tl)
+
+            self.transforms[joint] = T
 
 
 if __name__ == '__main__':
     agent = ForwardKinematicsAgent()
+    agent.keyframes = hello()
     agent.run()

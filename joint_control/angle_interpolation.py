@@ -69,8 +69,9 @@ class AngleInterpolationAgent(PIDAgent):
                     if current_time < times[j][0]:
                         angle = self.first_bezier_angle(j, name, current_time, times, keys)
                     # Now is between interpolation
-                    elif times[j][t_inx] < current_time < times[j][t_inx + 1] and t_inx + 1 < len(times[j]):
-                        angle = self.calculate_bezier_angle(j, t_inx, current_time, times, keys)
+                    elif t_inx + 1 < len(times[j]):
+                        if times[j][t_inx] < current_time < times[j][t_inx + 1]:
+                            angle = self.calculate_bezier_angle(j, t_inx, current_time, times, keys)
                     target_joints[name] = angle
                     # LHip and RHip are connected, but not in the simulation
                     if name == "LHipYawPitch":
@@ -108,7 +109,7 @@ class AngleInterpolationAgent(PIDAgent):
         p3 = keys[j][t + 1][0]
         # Control angles
         p1 = p0 + keys[j][t][1][2]
-        p2 = p3 + keys[j][t][2][2]
+        p2 = p3 + keys[j][t][1][2]
 
         return self.cubic_bezier_interpolation(p0, p1, p2, p3, dt)
 
@@ -123,7 +124,7 @@ class AngleInterpolationAgent(PIDAgent):
 
 if __name__ == '__main__':
     agent = AngleInterpolationAgent()
-    agent.keyframes = leftBackToStand()  # CHANGE DIFFERENT KEYFRAMES
+    agent.keyframes = hello()  # CHANGE DIFFERENT KEYFRAMES
 
     # By the Belly keyframes NAO not falls on the Belly ...
     if agent.keyframes == leftBellyToStand() or agent.keyframes == rightBellyToStand():
