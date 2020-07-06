@@ -12,7 +12,7 @@
 
 from forward_kinematics import ForwardKinematicsAgent
 from numpy.matlib import identity
-
+s
 
 class InverseKinematicsAgent(ForwardKinematicsAgent):
     def inverse_kinematics(self, effector_name, transform):
